@@ -1,0 +1,55 @@
+.mainDiv{
+    width:70%;
+    margin-left:15%;
+    margin-right:15%;
+    margin-top:20px;
+    height:425px;
+    border-color:gray;
+    border-width: 0.5px;
+    border:solid;
+}
+
+
+.headerDiv{
+    background-color: black;
+    color: yellow;
+    height: 60px;
+    width: 100%;
+    font-size: 30px;
+    line-height: 60px;
+    text-align:center;
+    position: relative;
+    margin-bottom: 10px
+}
+
+.outsiteDiv{
+    height:32px;
+    line-height:32px;
+    background-color: #E8E8E8;
+    border:solid;
+    border-color: gray;
+    border-width: 1px;
+}
+
+.labelFirst{
+    width:15%;
+    background-color: black;
+    float:left;
+    color: white;
+    text-align: center;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.inputFirst{
+    float:left;
+    line-height:20px;
+    margin-top:2px;
+    margin-bottom:2px;
+}
+
+.fieldsetSecond{
+    background-color: #E8E8E8;
+    width:39.6%;
+    float:left;
+}

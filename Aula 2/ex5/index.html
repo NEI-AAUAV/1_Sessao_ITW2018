@@ -1,0 +1,80 @@
+<head>
+	<meta charset="UTF-8">
+	<title>Exercício 5 - Pratica 2</title>
+</head>
+<!--ATENÇÃO - DE FORMA AOS ELEMENTOS DO FORMULÁRIO FICAREM "EM LINHA" É UTILIZADA UMA TABELA
+      COM A INTRODUÇÃO DE BOOTSTRAP ESTA NUNCA DEVE SER A SOLUÇÃO A SER USADA-->
+
+<body>
+	<!--criação do formulário com nome "UserForm" e com envio de valores para "http://192.168.160.36/FormEcho.aspx"-->
+	<form name="UserForm" action="http://192.168.160.36/FormEcho.aspx">
+		<fieldset>
+			<legend>Informação pessoal</legend>
+			<table>
+				<tr>
+					<th>Curso</th>
+					<td>
+						<select name="Course" a>
+							<!--criação de um drop-down menu com as várias opções de curso-->
+							<option value="1">LEI</option>
+							<option value="2">ECT</option>
+							<option value="3">ET</option>
+							<option value="4">Outro</option>
+						</select>
+					</td>
+				</tr>
+				<tr>
+					<th>First Name:</th>
+					<td>
+						<input type="text" name="FirstName" placeholder="Digite o seu primeiro nome" value="Joaquim">
+						<!--criação de campo de texto para o utilizador inserir o nome, com informação "Digite o seu primeiro nome" e valor predefenido para "Joaquim"-->
+					</td>
+				</tr>
+				<tr>
+					<th>Last Name:</th>
+					<td>
+						<input type="text" name="LastName" placeholder="Digite o seu sobrenome">
+						<!--criação de campo de texto para o utilizador inserir o nome, com informação "Digite o seu sobrenome" e sem valor predefenido-->
+					</td>
+				</tr>
+				<tr>
+					<th>Password:</th>
+					<td>
+						<input type="password" name="Pwd" placeholder="Digite a sua palavra passe">
+						<!--criação de campo para o utilizador inserir a sua password, com informação "Digite a sua palavra passe" e sem valor predefenido (nem faria sentdo ter, sendo uma password)-->
+					</td>
+				</tr>
+			</table>
+		</fieldset>
+		<fieldset>
+			<legend>Comments</legend>
+			<textarea name="Comments" cols="250" rows="10" placeholder="Insira os seus comentários"></textarea>
+			<!--criação de uma caixa de texto com 250 colunas e 10 linhas e com informação "Insira os seus comentários"-->
+		</fieldset>
+		<table width="100%">
+			<tr>
+				<td>
+					<fieldset>
+						<legend>Meios de transporte</legend>
+						<input type="checkbox" name="Vehicle" value="Bicicleta">Bicicleta <br />
+						<input type="checkbox" name="Vehicle" value="Carro">Carro <br />
+						<input type="checkbox" name="Vehicle" value="Comboio">Comboio <br />
+						<!--criação de uma checkbox para o utilizador escolher um ou mais meios de transporte-->
+					</fieldset>
+				</td>
+				<td>
+					<fieldset>
+						<legend>Cor preferida</legend>
+						<input type="radio" name="Color" value="Azul">Azul <br />
+						<input type="radio" name="Color" value="Verde">Verde <br />
+						<input type="radio" name="Color" value="Vermelha">Vermelha <br />
+						<input type="radio" name="Color" value="Outra">Outra <br />
+						<!--criação de uma checkbox para o utilizador escolher APENAS uma cor preferida-->
+					</fieldset>
+				</td>
+			</tr>
+		</table>
+		<input name="Button" type="Submit" />
+		<input type="reset" name="resetBtn" value="Reset" />
+	</form>
+</body>

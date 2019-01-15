@@ -1,0 +1,87 @@
+<!DOCTYPE HTML>
+
+<html>
+<head>
+	<meta charset="utf-8">
+  	<title>Jogo javascript</title>
+</head>
+<body>
+
+    <!-- Título. -->
+	<h1> O meu joginho ... </h1>
+
+    <!-- Linha horizontal. -->
+	<hr />
+
+    <!-- Butão para chamar a função baralhar, para baralhar os quadrados -->
+	<button onclick="baralhar()">Baralhar</button>
+
+    <!-- Div que vai mostrar a informação dos quadrados. -->
+	<div id="square_info" style="width:100%; height:100px">
+		<p id="square_name"></p>
+		<p id="square_top"></p>
+		<p id="square_left"></p>
+	</div>
+
+    <!-- Div que onde os quadrados serão colocados. -->
+    <div id="game_board">
+		<div id="green_square"  onmouseover="show_square_info(this)" style="position:absolute; width:45px; height:45px; background-color: green"></div>
+		<div id="yellow_square" onmouseover="show_square_info(this)" style="position:absolute; width:45px; height:45px; background-color: yellow"></div>
+		<div id="red_square"    onmouseover="show_square_info(this)" style="position:absolute; width:45px; height:45px; background-color: red"></div>
+		<div id="blue_square"   onmouseover="show_square_info(this)" style="position:absolute; width:45px; height:45px; background-color: blue"></div>
+	</div>
+
+  	<script>
+        // Baralhar os quadrados quando a página estiver carregada.
+		window.onload = baralhar;
+
+        /**
+         *  Função auxiliar para baralhar os quadrados.
+         *
+         *  Sempre que é chamada, altera a posição vertical e horizontal
+         *  de todos os quadrados em jogo aleatoriamente.
+         *
+         */
+		function baralhar() {
+            // ID's de todos os quadrados em jogo.
+            var squares_id = ["green_square", "yellow_square", "red_square", "blue_square"];
+            // Percorrer todos os quadrados.
+            for (var i in squares_id) {
+                // Obter uma referência para o elemento através do seu id.
+                square = document.getElementById(squares_id[i]);
+                // Definir o limite inferior vertical onde o quadrado pode ser colocado.
+                min_top  = 250;
+                // Definir o limite superior vertical onde o quadrado pode ser colocado.
+                // 300 - Para dar uma margenzinha para os quadrados não ficarem mesmo nos limites.
+                max_top  = window.innerHeight - 300;
+                // Definir o limite inferior horizontal onde o quadrado pode ser colocado.
+                min_left = 50;
+                // Definir o limite superior horizontal onde o quadrado pode ser colocado.
+                // 100 - Para dar uma margenzinha para os quadrados não ficarem mesmo nos limites.
+                max_left = window.innerWidth - 100;
+                // Definir a posição vertical do quadrado aleatoriamente (dentro dos limites estabelecidos)
+                console.log(min_top+":"+max_top)
+                square.style.top  = Math.floor((Math.random() * max_top) + min_top) + "px";
+                // Definir a posição horizontal do quadrado aleatoriamente (dentro dos limites estabelecidos)
+                square.style.left = Math.floor((Math.random() * max_left) + min_left) + "px";
+            }
+		}
+
+        /**
+         *  Função auxiliar para mostrar a informação de um quadrado.
+         *  
+         *  Sempre que esta função é chamada, esta vai substituir o texto
+         *  que estiver em:
+         *       <p id="square_name"></p>
+         *       <p id="square_top"></p>
+         *       <p id="square_left"></p>
+         *  pela informação do quadrado passado por argumento.
+         */
+        function show_square_info(square) {
+           document.getElementById("square_name").innerText = "Hi, I'm the " + square.id.split('_')[0] + " one";
+           document.getElementById("square_top").innerText  = "top: " + square.style.top;
+           document.getElementById("square_left").innerText = "left: " + square.style.left;
+        }
+	</script>
+</body>
+</html>

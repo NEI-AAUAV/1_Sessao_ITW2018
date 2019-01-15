@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+        <meta charset="UTF-8">
+        <title>Jogo javascript</title>
+
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+        <!-- jQuery library -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+        <!-- Latest compiled JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <style>
+                #azul{
+                        width:100px;
+                        height:100px;
+                        background-color:blue;
+                        position:absolute;
+                }
+                #vermelho{
+                        width:100px;
+                        height:100px;
+                        background-color:red;
+                        position:absolute;
+                }
+                #verde{
+                        width:100px;
+                        height:100px;
+                        background-color:green;
+                        position:absolute;
+                }
+                #amarelo{
+                        width:100px;
+                        height:100px;
+                        background-color:yellow;
+                        position:absolute;
+                }
+        
+        </style>
+        <!--Desenhar os quadrados nos respetivos divs com css atraves do id
+                        Tem que ser position absolute!!!!!!-->
+</head>
+
+<body>
+        <button type="button" class="btn btn-success" onclick="scramble()">Baralhar</button>
+        <br>
+        <span id="currentInfo"></span>
+        <div id="azul" style="top: 0px;left: 0px" onmouseover="setCurrentDiv(this)" onmouseout="clearSelected()"></div>
+        <!--A passar o this como argumento, na funçao o argumento sera o div com os respetivos atributos(ex:id,style,etc)-->
+        <div id="vermelho" style="top: 0px;left: 0px" onmouseover="setCurrentDiv(this)" onmouseout="clearSelected()"></div>
+        <div id="verde" style="top: 0px;left: 0px" onmouseover="setCurrentDiv(this)" onmouseout="clearSelected()"></div>
+        <div id="amarelo" style="top: 0px;left: 0px" onmouseover="setCurrentDiv(this)" onmouseout="clearSelected()"></div>
+
+        <script src="ex5.js" type="text/javascript"></script>
+</body>
+
+</html>

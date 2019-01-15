@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="css/mainStyle.css">
+
+    <title>Boletim de Inscrição</title>
+</head>
+
+<body>
+    <!--Main div -  Contains entire form-->
+    <div class="mainDiv">
+
+        <!--Form title-->
+        <div class="headerDiv">
+            <span>Boletim de Inscrição</span>
+        </div>
+
+        <!-- Start the form area - to be send to 192.168.160.36-->
+        <form name="FormValues" action="http://192.168.160.36/FormEcho.aspx" method="post">
+
+            <!-- First part of the form-->
+            <div>
+                <div class="outsiteDiv">
+                    <div class="labelFirst">Nome</div>
+                    <input class="inputFirst" type="text" name="nome" value="" id="nome" style="width:50%" />
+                </div>
+                <div class="outsiteDiv">
+                    <div class="labelFirst">Login</div>
+                    <input class="inputFirst" type="text" name="login" value="" id="login" style="width:50%" /> <br />
+                </div>
+                <div class="outsiteDiv">
+                    <div class="labelFirst">Password</div>
+                    <input class="inputFirst" type="password" name="pw" value="" id="pw" style="width:35%" /> <br />
+                </div>
+            </div>
+
+            <!-- Second part of the form-->
+            <div style="margin-top:10px; height:200px">
+                <div class="labelFirst" style="height:200px">Password</div>
+                <div>
+                    <fieldset class="fieldsetSecond" style="height:120px">
+                        <legend>1º Semestre - Curriculares</legend>
+                        <input type="checkbox" name="curriculares1" value="ALGA">Álgebra Linear e Geometria Analítica<br>
+                        <input type="checkbox" name="curriculares1" value="EF">Elementos de Física<br>
+                        <input type="checkbox" name="curriculares1" value="C1">Cálculo I<br>
+                        <input type="checkbox" name="curriculares1" value="ITW">Introdução às Tecnologias Web<br>
+                        <input type="checkbox" name="curriculares1" value="FP">Fundamentos de Programação<br>
+                    </fieldset>
+
+                    <fieldset class="fieldsetSecond" style="height:120px">
+                        <legend>2º Semestre - Curriculares</legend>
+                        <input type="checkbox" name="curriculares1" value="ALGA">Álgebra Linear e Geometria Analítica<br>
+                        <input type="checkbox" name="curriculares1" value="EF">Elementos de Física<br>
+                        <input type="checkbox" name="curriculares1" value="C1">Cálculo I<br>
+                        <input type="checkbox" name="curriculares1" value="ITW">Introdução às Tecnologias Web<br>
+                        <input type="checkbox" name="curriculares1" value="FP">Fundamentos de Programação<br>
+                    </fieldset>
+
+                    <fieldset class="fieldsetSecond" style="height:35px">
+                        <legend>1º Semestre - Opcionais</legend>
+                        <label class="radio-inline">
+                            <input type="radio" name="radio1S" value="musica">Música
+                        </label>
+                        <label class="radio-inline">
+                            <input type="radio" name="radio1S" value="teatro">Teatro
+                        </label>
+                        <label class="radio-inline">
+                            <input type="radio" name="radio1S" value="cinema">Cinema
+                        </label>
+                        <label class="radio-inline">
+                            <input type="radio" name="radio1S" value="fotografia">Fotografia
+                        </label>
+                    </fieldset>
+
+                    <fieldset class="fieldsetSecond" style="height:35px">
+                        <legend>2º Semestre - Opcionais</legend>
+                        <label class="radio-inline">
+                            <input type="radio" name="radio2S" value="musica">Música
+                        </label>
+                        <label class="radio-inline">
+                            <input type="radio" name="radio2S" value="teatro">Teatro
+                        </label>
+                        <label class="radio-inline">
+                            <input type="radio" name="radio2S" value="cinema">Cinema
+                        </label>
+                        <label class="radio-inline">
+                            <input type="radio" name="radio2S" value="fotografia">Fotografia
+                        </label>
+                    </fieldset>
+                </div>
+            </div>
+            <div style="margin-top:10px; text-align:center">
+                <input type="submit" value="Submeter" style="height:25px; width:100px">
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>

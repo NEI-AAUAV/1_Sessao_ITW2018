@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Javascript test file</title>
+    <script src="js/myScript.js" type="text/javascript"></script>
+</head>
+
+<!--In the first load of the page, element 'operacao' is null-->
+<body onload="getOperacao()">
+    
+    <!--FIRST VALUE (starts with 2)-->
+    <input id="op1" value="2" />
+    <!--OPERATOR FIELD-->
+    <select id="operacao" onchange="getOperacao()">
+        <option value="+"> Soma </option>
+        <option value="-"> Subtração </option>
+        <option value="*"> Multiplicação </option>
+        <option value=":"> Divisão </option>
+        <option value="%"> Resto da Divisão </option>
+        <option value="!"> Fatorial </option>
+    </select>
+    <!--SECOND VALUE (starts with 3)-->
+    <input id="op2" value="3" />
+    <!--RESULT FIELD-->
+    <input id="res" value="" /><br />
+    <button onclick="calcula()">Calcular</button>
+</body>
+
+</html>
